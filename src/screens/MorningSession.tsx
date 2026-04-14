@@ -44,12 +44,14 @@ const MorningSession = () => {
 
   const [step, setStep] = useState(dayState.morning.currentStep || 0);
   const [notes, setNotes] = useState(state.journals[dateKey]?.morningNotes || '');
+  const [showVerse, setShowVerse] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTo(0, 0);
     }
+    setShowVerse(false);
   }, [step]);
 
   const saveNotes = (val: string) => {
@@ -150,6 +152,32 @@ const MorningSession = () => {
                       <p className="text-sm font-medium text-ink/60 mb-2">Instruction:</p>
                       <p className="text-ink font-semibold">{config.morningSession.phase1.instruction}</p>
                     </div>
+
+                    <button 
+                      onClick={() => setShowVerse(!showVerse)}
+                      className="w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 bg-navy/5 text-navy border-2 border-navy/10 transition-all active:scale-95"
+                    >
+                      <BookOpen size={20} />
+                      {showVerse ? 'Hide Verses' : 'Read Verses'}
+                    </button>
+
+                    <AnimatePresence>
+                      {showVerse && (
+                        <motion.div 
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="card bg-navy text-cream p-6 space-y-4 mt-2">
+                            <p className="text-lg leading-relaxed italic">
+                              "{WEEK_CONFIG.slice(0, 5).map(day => day.verseText).join(' ')}"
+                            </p>
+                            <p className="text-sm font-bold text-cream/60">— The Weekly Passage</p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 )}
                 {step === 1 && (
@@ -212,10 +240,35 @@ const MorningSession = () => {
               <div className="space-y-6">
                 {step === 0 && (
                   <div className="space-y-6">
-                    <div className="card bg-navy text-cream p-6 space-y-4">
-                      <p className="text-lg leading-relaxed italic">"{config.verseText}"</p>
-                      <p className="text-sm font-bold text-cream/60">— {config.verseRef}</p>
+                    <div className="bg-white rounded-2xl p-4 border border-border">
+                      <p className="text-sm font-medium text-ink/60 mb-2">Instruction:</p>
+                      <p className="text-ink font-semibold">{config.morningSession.phase1.instruction}</p>
                     </div>
+
+                    <button 
+                      onClick={() => setShowVerse(!showVerse)}
+                      className="w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 bg-navy/5 text-navy border-2 border-navy/10 transition-all active:scale-95"
+                    >
+                      <BookOpen size={20} />
+                      {showVerse ? 'Hide Verse' : 'Read Verse'}
+                    </button>
+
+                    <AnimatePresence>
+                      {showVerse && (
+                        <motion.div 
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="card bg-navy text-cream p-6 space-y-4 mt-2">
+                            <p className="text-lg leading-relaxed italic">"{config.verseText}"</p>
+                            <p className="text-sm font-bold text-cream/60">— {config.verseRef}</p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
                     <div className="bg-white rounded-2xl p-4 border border-border">
                       <p className="text-sm font-medium text-ink/60 mb-2">Meditation Question:</p>
                       <p className="text-ink font-semibold">{config.morningSession.phase1.question}</p>

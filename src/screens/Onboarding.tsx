@@ -41,8 +41,9 @@ const Onboarding = () => {
               <Shield size={48} />
             </div>
             <div className="space-y-4">
-              <h1 className="text-3xl">Victor's Covenant</h1>
-              <p className="text-ink/70 leading-relaxed">
+              <h1 className="text-3xl font-bold tracking-tight">FRESH With Prayer</h1>
+              <p className="text-sm font-bold text-navy/60 uppercase tracking-widest">From Raw Experience, Shape History</p>
+              <p className="text-ink/70 leading-relaxed mt-4">
                 A 7-day Scripture Prayer System designed to guide you through daily spiritual discipline and continuous growth.
               </p>
             </div>

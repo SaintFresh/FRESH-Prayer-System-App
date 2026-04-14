@@ -8,7 +8,7 @@ const MoreMenu = () => {
     { label: 'Memorization Tracker', icon: BookOpen, path: '/memorization', color: 'text-ink/60' },
     { label: 'Settings', icon: Settings, path: '/settings', color: 'text-ink/60' },
     { label: 'Help & Guide', icon: HelpCircle, path: '/help', color: 'text-ink/60' },
-    { label: 'About Victor\'s Covenant', icon: Info, path: '/help', color: 'text-ink/60' },
+    { label: 'About FRESH With Prayer', icon: Info, path: '/help', color: 'text-ink/60' },
   ];
 
   return (

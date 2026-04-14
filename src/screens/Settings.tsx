@@ -123,7 +123,7 @@ const Settings = () => {
               const url = URL.createObjectURL(blob);
               const a = document.createElement('a');
               a.href = url;
-              a.download = `victors-covenant-backup-${format(new Date(), 'yyyy-MM-dd')}.json`;
+              a.download = `fresh-with-prayer-backup-${format(new Date(), 'yyyy-MM-dd')}.json`;
               a.click();
               toast.success('Data exported successfully');
             }}
@@ -172,7 +172,7 @@ const Settings = () => {
 
       <div className="text-center pt-8">
         <p className="text-[10px] text-ink/30 uppercase tracking-widest font-bold">
-          Victor's Covenant v1.0.0
+          FRESH With Prayer v1.0.0
         </p>
       </div>
     </div>

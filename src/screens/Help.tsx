@@ -9,7 +9,7 @@ const Help = () => {
     {
       title: 'The Concept',
       icon: Shield,
-      content: 'Victor\'s Covenant is a 7-day scripture prayer system designed to help you build spiritual discipline and walk in continuous victory through Christ. It is a strategic framework for self-competition, not human comparison.'
+      content: 'FRESH With Prayer is a 7-day scripture prayer system designed to help you build spiritual discipline and walk in continuous victory through Christ. It is a strategic framework for self-competition, not human comparison.'
     },
     {
       title: 'The Philosophy',

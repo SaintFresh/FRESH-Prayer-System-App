@@ -1,6 +1,6 @@
-# Victor's Covenant
+# FRESH With Prayer
 
-Victor's Covenant is a 7-day Scripture Prayer System designed to guide you through daily spiritual discipline and continuous growth. Built as a privacy-first, local-only web application, it helps users establish a consistent rhythm of prayer, reflection, and scripture memorization.
+FRESH With Prayer is a 7-day Scripture Prayer System designed to guide you through daily spiritual discipline and continuous growth. Built as a privacy-first, local-only web application, it helps users establish a consistent rhythm of prayer, reflection, and scripture memorization. FRESH stands for **F**rom **R**aw **E**xperience, **S**hape **H**istory.
 
 ## 🌟 Features
 
@@ -57,4 +57,4 @@ Victor's Covenant is a 7-day Scripture Prayer System designed to guide you throu
 
 ## 🔒 Data Privacy
 
-Victor's Covenant is designed to be a personal, private tool. All data is saved exclusively to your browser's `localStorage`. If you clear your browser data, your progress will be lost. Use the **Export Data** feature in the Settings menu to regularly back up your journals and progress.
+FRESH With Prayer is designed to be a personal, private tool. All data is saved exclusively to your browser's `localStorage`. If you clear your browser data, your progress will be lost. Use the **Export Data** feature in the Settings menu to regularly back up your journals and progress.
